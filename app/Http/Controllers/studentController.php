@@ -20,7 +20,7 @@ class studentController extends Controller
 	}
     public function save()
     {	
-		request()-validate(
+		request()->validate(
 		[
 			'name'=>['required','min:3'],
 			'surname'=>['required','min:3'],
@@ -56,7 +56,7 @@ class studentController extends Controller
 	public function update($id)
     {		
 		$student=student::findOrFail($id);
-		request()-validate(
+		request()->validate(
 		[
 			'name'=>['required','min:3'],
 			'surname'=>['required','min:3'],
