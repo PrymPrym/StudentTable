@@ -46,11 +46,13 @@ class studentController extends Controller
 		$student->save();
 		return redirect('/students');
 	}
+	
     public function edit($id)
     {	
 		$studentItem=student::findOrFail($id);
 		return view('studentsedit',['student'=>$studentItem]);
 	}
+	
 	public function update($id)
     {		
 		$student=student::findOrFail($id);
